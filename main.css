@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+     background: black;
+}
+body html {
+    margin: 0;
+    padding: 0;
+    background: black;
+}
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    margin: 70px;
+    align-items: center;
+    /* transform-style: preserve-3d; */
+}
+.container {
+  display: grid;
+}
+.content, .overlay {
+  grid-area: 1 / 1;
+}
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+  font-size: 1em;
+    height: 300px;
+    width: 300px;
+    border-radius: 100%;
+    color: white;
+   background:  hsla(320, 100%, 37%, 1);
+}
+.overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    font-size: 1em;
+    height: 300px;
+    width: 300px;
+    border-radius: 100%;
+    text-align: center;
+    background: hsla(320, 100%, 22%, 1);
+    transition: all 5s ease-in-out; 
+}
+.overlay:hover {
+ color: transparent;
+transform: rotateY(195deg);
+background: transparent;
+}
+
